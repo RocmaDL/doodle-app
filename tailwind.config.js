@@ -6,7 +6,12 @@ export default {
     "./resources/**/*.vue",
     ],
   theme: {
-    extend: {},
+      extend: {
+          fontFamily: {
+              'shortstack': ['Short Stack', 'cursive'],
+          }
+
+    },
   },
   plugins: [],
 }
