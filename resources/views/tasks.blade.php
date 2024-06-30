@@ -11,6 +11,12 @@
     <ul>
         @foreach ($tasks as $task)
             <li>{{ $task->title }}
+                <form action="/tasks/del/{{$task->id}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Supp. </button>
+                </form>
+
 
             </li>
         @endforeach

@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{url('tasks/edit')}}" method="update">
+    <form action="/tasks/edit/{{$task->id}}" method="post">
         @csrf
-        <input type="text" name="title" id="">
+        <input type="text" name="title" value="{{$task->title}}">
 
-        <input type="datetime-local" name="end-date" id="">
+        <input type="datetime-local" name="end-date" id="" value="{{$task->end_date}}">
 
         <input type="submit" value="">
     </form>

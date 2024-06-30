@@ -31,11 +31,22 @@ class TaskController extends Controller
         // dd($data, $data1);
     }
 
-    public function edit_view():View{
-        return view("tasks_edit");
+    public function edit_view($id):View{
+        $task = Task::find($id);
+        return view("tasks_edit", compact('task'));
     }
 
-        public function edit(Request $request):void{
+    public function edit(Request $request, $id):void{
+        $task = Task::find($id);
+        $task->title = $request->input("title");
+        $task->end_date = $request->input("end_date");
+        $task->save();
+    }
 
+    public function delete($id):void{
+        $task = Task::find($id);
+        if ($task) {
+        $task->delete();
+        }
     }
 }
