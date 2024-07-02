@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->boolean('completed')->default(false);
-            $table->dateTime('end_date')->nullable();
+        Schema::create('folders', function (Blueprint $table) {
+            $table->id()->autoIncrement();
             $table->timestamps();
+            $table->string('name')->unique();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tasks');
+        Schema::dropIfExists('folders');
     }
 };
