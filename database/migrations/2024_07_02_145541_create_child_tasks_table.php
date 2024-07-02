@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\ListTasks;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +19,7 @@ return new class extends Migration
             $table->dateTime('end_date')->nullable();
             $table->foreignId('priority_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('category_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->foreignId('page_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignIdFor(ListTasks::class)->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('task_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

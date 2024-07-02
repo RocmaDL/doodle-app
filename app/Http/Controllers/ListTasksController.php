@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Page;
+use App\Models\ListTasks;
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class ListTasksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class PageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Page $page)
+    public function show(ListTasks $listTasks)
     {
         //
     }
@@ -42,7 +42,7 @@ class PageController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Page $page)
+    public function edit(ListTasks $listTasks)
     {
         //
     }
@@ -50,7 +50,7 @@ class PageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Page $page)
+    public function update(Request $request, ListTasks $listTasks)
     {
         //
     }
@@ -58,7 +58,7 @@ class PageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Page $page)
+    public function destroy(ListTasks $listTasks)
     {
         //
     }
