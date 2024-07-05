@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Models\ListTasks;
+use App\Http\Controllers\Controller;
+use App\Models\ChildTask;
 use Illuminate\Http\Request;
 
-class ListTasksController extends Controller
+class ChildTaskController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class ListTasksController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ListTasks $listTasks)
+    public function show(ChildTask $childTask)
     {
         //
     }
@@ -42,7 +43,7 @@ class ListTasksController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ListTasks $listTasks)
+    public function edit(ChildTask $childTask)
     {
         //
     }
@@ -50,7 +51,7 @@ class ListTasksController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ListTasks $listTasks)
+    public function update(Request $request, ChildTask $childTask)
     {
         //
     }
@@ -58,7 +59,7 @@ class ListTasksController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ListTasks $listTasks)
+    public function destroy(ChildTask $childTask)
     {
         //
     }

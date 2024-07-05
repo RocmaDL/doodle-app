@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Models\Priority;
+use App\Models\ListTasks;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class PriorityController extends Controller
+class ListTasksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class PriorityController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Priority $priority)
+    public function show(ListTasks $listTasks)
     {
         //
     }
@@ -42,7 +43,7 @@ class PriorityController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Priority $priority)
+    public function edit(ListTasks $listTasks)
     {
         //
     }
@@ -50,7 +51,7 @@ class PriorityController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Priority $priority)
+    public function update(Request $request, ListTasks $listTasks)
     {
         //
     }
@@ -58,7 +59,7 @@ class PriorityController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Priority $priority)
+    public function destroy(ListTasks $listTasks)
     {
         //
     }

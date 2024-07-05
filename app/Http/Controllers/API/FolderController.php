@@ -1,18 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Models\ChildTask;
+
+use App\Models\Folder;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class ChildTaskController extends Controller
+class FolderController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return response()->json(Folder::all());
     }
 
     /**
@@ -34,7 +36,7 @@ class ChildTaskController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ChildTask $childTask)
+    public function show(Folder $folder)
     {
         //
     }
@@ -42,7 +44,7 @@ class ChildTaskController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ChildTask $childTask)
+    public function edit(Folder $folder)
     {
         //
     }
@@ -50,7 +52,7 @@ class ChildTaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ChildTask $childTask)
+    public function update(Request $request, Folder $folder)
     {
         //
     }
@@ -58,7 +60,7 @@ class ChildTaskController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ChildTask $childTask)
+    public function destroy(Folder $folder)
     {
         //
     }
